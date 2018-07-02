@@ -111,12 +111,18 @@ NSSet <NSManagedObjectID *> *RKSetOfManagedObjectIDsFromManagedObjectContextDidS
 
 - (void)handleManagedObjectContextWillSaveNotification:(NSNotification *)notification
 {
-    self.objectIDsFromChildDidSaveNotification = RKSetOfManagedObjectIDsFromManagedObjectContextDidSaveNotification(notification);
+    if (notification.object == self.mergeContext) {
+        self.objectIDsFromChildDidSaveNotification = RKSetOfManagedObjectIDsFromManagedObjectContextDidSaveNotification(notification);
+    }
 }
 
 - (void)handleManagedObjectContextDidSaveNotification:(NSNotification *)notification
 {
     NSAssert([notification object] == self.observedContext, @"Received Managed Object Context Did Save Notification for Unexpected Context: %@", [notification object]);
+    if (notification.object != self.observedContext) {
+        return;
+    }
+    
     if (! [self.objectIDsFromChildDidSaveNotification isEqual:RKSetOfManagedObjectIDsFromManagedObjectContextDidSaveNotification(notification)]) {
         [self.mergeContext performBlock:^{
             
