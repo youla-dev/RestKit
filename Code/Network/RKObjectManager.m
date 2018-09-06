@@ -872,7 +872,9 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFRKHTTPClientParam
 
 - (NSArray *)responseDescriptors
 {
-    return [NSArray arrayWithArray:self.mutableResponseDescriptors];
+    @synchronized(self) {
+        return [NSArray arrayWithArray:self.mutableResponseDescriptors];
+    }
 }
 
 - (void)addResponseDescriptor:(RKResponseDescriptor *)responseDescriptor
