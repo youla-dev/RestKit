@@ -475,7 +475,13 @@ static void AFRKNetworkReachabilityReleaseCallback(const void *info) {
     NSURL *url = [NSURL URLWithString:path relativeToURL:self.baseURL];
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:method];
-    [request setAllHTTPHeaderFields:self.defaultHeaders];
+    
+    NSMutableDictionary *copyDict = [@{} mutableCopy];
+    NSDictionary *headers = [self.defaultHeaders copy];
+    for (NSString *key in headers) {
+        copyDict[key] = [headers[key] copy];
+    }
+    [request setAllHTTPHeaderFields:copyDict];
 
     if (parameters) {
         if ([method isEqualToString:@"GET"] || [method isEqualToString:@"HEAD"] || [method isEqualToString:@"DELETE"]) {
