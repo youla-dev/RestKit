@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
     ns.source_files   = 'Code/Network.h', 'Code/Network/**/*'
     ns.ios.frameworks = 'CFNetwork', 'Security', 'MobileCoreServices', 'SystemConfiguration'
     ns.osx.frameworks = 'CoreServices', 'Security', 'SystemConfiguration'
-    ns.dependency       'SOCKit'
+    ns.dependency       'SOCKit', :git => 'https://github.com/youla-dev/sockit.git'
     ns.dependency       'RestKit/ObjectMapping'
     ns.dependency       'RestKit/Support'
   end
