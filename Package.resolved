@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ISO8601DateFormatter",
+        "repositoryURL": "https://github.com/youla-dev/iso-8601-date-formatter",
+        "state": {
+          "branch": "xcframework",
+          "revision": "f44e7c02af88937bce94be2b152552f78a592c48",
+          "version": null
+        }
+      },
+      {
+        "package": "ISO8601DateFormatterValueTransformer",
+        "repositoryURL": "https://github.com/youla-dev/ISO8601DateFormatterValueTransformer",
+        "state": {
+          "branch": "xcframework",
+          "revision": "bef6b53516a871611e1d3ca33b0fb5cdca1e41da",
+          "version": null
+        }
+      },
+      {
+        "package": "RKValueTransformers",
+        "repositoryURL": "https://github.com/youla-dev/RKValueTransformers",
+        "state": {
+          "branch": "xcframework",
+          "revision": "ddd99cf8e01f494180dc4b6041026ba162a020f9",
+          "version": null
+        }
+      },
+      {
+        "package": "SOCKit",
+        "repositoryURL": "https://github.com/youla-dev/sockit",
+        "state": {
+          "branch": "xcframework",
+          "revision": "e6bb09d592bfe1c650f74cb1356646d822950318",
+          "version": null
+        }
+      },
+      {
+        "package": "TransitionKit",
+        "repositoryURL": "https://github.com/youla-dev/TransitionKit",
+        "state": {
+          "branch": "xcframework",
+          "revision": "46d025761161883404aa609a1786fda8356eed67",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
