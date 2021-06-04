@@ -29,3 +29,6 @@
 #import "RKNSJSONSerialization.h"
 #import "RKMIMETypeSerialization.h"
 #import "RKStringTokenizer.h"
+#import "RKMacros.h"
+#import "RKBooleanClass.h"
+#import "RKOperationStateMachine.h"

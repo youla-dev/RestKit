@@ -27,3 +27,9 @@
 #import "RKMapperOperation.h"
 #import "RKDynamicMapping.h"
 #import "RKErrorMessage.h"
+#import "RKPropertyInspector.h"
+#import "RKMappingErrors.h"
+#import "RKObjectUtilities.h"
+#import "RKObjectMappingOperationDataSource.h"
+#import "RKMapperOperation_Private.h"
+
