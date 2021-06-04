@@ -29,7 +29,7 @@
 #import "RKManagedObjectCaching.h"
 #import "RKRelationshipConnectionOperation.h"
 #import "RKMappingErrors.h"
-#import "RKValueTransformers.h"
+#import <RKValueTransformers/RKValueTransformers.h>
 #import "RKRelationshipMapping.h"
 #import "RKObjectUtilities.h"
 #import "NSManagedObject+RKAdditions.h"

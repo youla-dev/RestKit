@@ -20,7 +20,7 @@
 
 #import "RKPaginator.h"
 #import "RKMappingOperation.h"
-#import "SOCKit.h"
+#import <SOCKit/SOCKit.h>
 #import "RKLog.h"
 #import "RKPathMatcher.h"
 #import "RKHTTPUtilities.h"
