@@ -24,8 +24,8 @@ let package = Package(name: "RestKit",
             name: "RestKit",
             dependencies: [
                 .byName(name: "SOCKit"),
-                .target(name: "RKAFNetworking"),
-                .target(name: "CoreData")
+                .target(name: "RestKitAFNetworking"),
+                .target(name: "RestKitCoreData")
             ],
             path: "Code/Network/",
             publicHeadersPath: "",
@@ -38,7 +38,7 @@ let package = Package(name: "RestKit",
             ]
         ),
         .target(
-            name: "RKAFNetworking",
+            name: "RestKitAFNetworking",
             dependencies: [],
             path: "Code/AFNetworking",
             publicHeadersPath: "",
@@ -49,23 +49,23 @@ let package = Package(name: "RestKit",
                 .linkedFramework("SystemConfiguration")
             ]
         ),
-        .target(name: "CoreData",
+        .target(name: "RestKitCoreData",
                 dependencies: [
-                    .target(name: "ObjectMapping"),
+                    .target(name: "RestKitObjectMapping"),
                 ],
                 path: "Code/CoreData",
                 publicHeadersPath: "",
                 linkerSettings: [.linkedFramework("CoreData")]),
-        .target(name: "ObjectMapping",
+        .target(name: "RestKitObjectMapping",
                 dependencies: [
-                    .target(name: "Support"),
+                    .target(name: "RestKitSupport"),
                     .byName(name: "RKValueTransformers"),
                     .byName(name: "ISO8601DateFormatterValueTransformer"),
                 ],
                 path: "Code/ObjectMapping",
                 publicHeadersPath: ""
         ),
-        .target(name: "Support",
+        .target(name: "RestKitSupport",
                 dependencies: [
                     .byName(name: "TransitionKit"),
                 ],
