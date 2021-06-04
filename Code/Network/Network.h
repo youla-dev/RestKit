@@ -28,5 +28,7 @@
 #import "RKObjectRequestOperation.h"
 #import "RKObjectParameterization.h"
 #import "RKPathMatcher.h"
-
+#import "CoreData.h"
+#import "ObjectMapping.h"
+#import "Support.h"
 #import "RKManagedObjectRequestOperation.h"

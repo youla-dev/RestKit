@@ -9,8 +9,7 @@ let package = Package(name: "RestKit",
         .library(
             name: "RestKit",
             targets: [
-                "Network",
-                "ObjectMapping",
+                "RestKit",
             ]),
     ],
     dependencies: [
@@ -22,11 +21,9 @@ let package = Package(name: "RestKit",
     ],
     targets: [
         .target(
-            name: "Network",
+            name: "RestKit",
             dependencies: [
                 .byName(name: "SOCKit"),
-                .target(name: "ObjectMapping"),
-                .target(name: "Support"),
                 .target(name: "RKAFNetworking"),
                 .target(name: "CoreData")
             ],
@@ -52,6 +49,13 @@ let package = Package(name: "RestKit",
                 .linkedFramework("SystemConfiguration")
             ]
         ),
+        .target(name: "CoreData",
+                dependencies: [
+                    .target(name: "ObjectMapping"),
+                ],
+                path: "Code/CoreData",
+                publicHeadersPath: "",
+                linkerSettings: [.linkedFramework("CoreData")]),
         .target(name: "ObjectMapping",
                 dependencies: [
                     .target(name: "Support"),
@@ -70,14 +74,6 @@ let package = Package(name: "RestKit",
                 linkerSettings: [
                     .linkedFramework("CoreData"),
                 ]
-        ),
-        .target(name: "CoreData",
-                dependencies: [
-                    .target(name: "ObjectMapping"),
-                    .target(name: "Support")
-                ],
-                path: "Code/CoreData",
-                publicHeadersPath: "",
-                linkerSettings: [.linkedFramework("CoreData")])
+        )
     ]
 )
