@@ -29,6 +29,6 @@
 #import "RKObjectParameterization.h"
 #import "RKPathMatcher.h"
 
-#if __has_include("CoreData.h")
+//#if __has_include("CoreData.h")
 #import "RKManagedObjectRequestOperation.h"
-#endif
+//#endif
