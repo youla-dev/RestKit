@@ -24,9 +24,7 @@
 
 #import "AFRKNetworking.h"
 
-#if __has_include("CoreData.h")
 #   define RKCoreDataIncluded
-#endif
 
 @protocol RKSerialization;
 @class RKManagedObjectStore, RKObjectRequestOperation, RKManagedObjectRequestOperation,

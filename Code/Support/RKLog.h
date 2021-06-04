@@ -19,9 +19,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#if __has_include("CoreData.h")
 #import <CoreData/CoreData.h>
-#endif
 
 /**
  RestKit Logging is based on the LibComponentLogging framework
@@ -233,7 +231,6 @@ void RKLogConfigureFromEnvironment(void);
  */
 void RKLogValidationError(NSError *error);
 
-#if __has_include("CoreData.h")
 /**
  Logs extensive information an NSError generated as the result of a
  failed Core Data interaction, such as the execution of a fetch request
@@ -244,7 +241,6 @@ void RKLogValidationError(NSError *error);
  at invocation time.
  */
 void RKLogCoreDataError(NSError *error);
-#endif
 
 /**
  Logs the value of an NSUInteger as a binary string. Useful when

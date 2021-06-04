@@ -39,11 +39,9 @@
 #import "RKRoute.h"
 #import "RKRouteSet.h"
 
-#if __has_include("CoreData.h")
 #   define RKCoreDataIncluded
 #   import "RKManagedObjectStore.h"
 #   import "RKManagedObjectRequestOperation.h"
-#endif
 
 #if !__has_feature(objc_arc)
 #error RestKit must be built with ARC. \

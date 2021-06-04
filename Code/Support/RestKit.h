@@ -33,9 +33,7 @@
 #import "Support.h"
 #endif
 
-//#if __has_include("CoreData.h")
 #import "CoreData.h"
-//#endif
 
 /**
  Set the App logging component. This header

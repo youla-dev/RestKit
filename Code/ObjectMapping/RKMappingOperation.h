@@ -18,9 +18,7 @@
 //  limitations under the License.
 //
 
-#if __has_include("CoreData.h")
 #import <CoreData/CoreData.h>
-#endif
 
 #import "RKObjectMapping.h"
 #import "RKAttributeMapping.h"
@@ -112,7 +110,6 @@
  */
 - (void)mappingOperation:(RKMappingOperation *)operation didSelectObjectMapping:(RKObjectMapping *)objectMapping forDynamicMapping:(RKDynamicMapping *)dynamicMapping;
 
-#if __has_include("CoreData.h")
 
 ///----------------------------------------
 /// @name Tracking Relationship Connections
@@ -140,8 +137,6 @@
  @param connection The connection object describing how the relationship was to be connected.
  */
 - (void)mappingOperation:(RKMappingOperation *)operation didFailToConnectRelationship:(NSRelationshipDescription *)relationship usingConnection:(RKConnectionDescription *)connection;
-
-#endif
 
 @end
 

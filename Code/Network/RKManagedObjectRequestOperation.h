@@ -18,9 +18,6 @@
 //  limitations under the License.
 //
 
-#if __has_include("CoreData.h")
-#if __has_include("RKManagedObjectCaching.h")
-
 #import "RKObjectRequestOperation.h"
 #import "RKManagedObjectCaching.h"
 
@@ -205,5 +202,3 @@ typedef NSFetchRequest *(^RKFetchRequestBlock)(NSURL *URL);
  */
 NSArray *RKArrayOfFetchRequestFromBlocksWithURL(NSArray *fetchRequestBlocks, NSURL *URL);
 
-#endif
-#endif

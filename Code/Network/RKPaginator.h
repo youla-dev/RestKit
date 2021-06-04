@@ -156,7 +156,6 @@
 /// @name Core Data Configuration
 ///------------------------------
 
-#if __has_include("CoreData.h")
 /**
  The managed object context in which paginated managed objects are to be persisted.
  */
@@ -171,7 +170,6 @@
  An array of fetch request blocks.
  */
 @property (nonatomic, copy) NSArray *fetchRequestBlocks;
-#endif
 
 ///------------------------------------
 /// @name Accessing Pagination Metadata

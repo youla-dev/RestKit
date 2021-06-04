@@ -25,10 +25,8 @@
 #import "RKPathMatcher.h"
 #import "RKHTTPUtilities.h"
 
-#if __has_include("CoreData.h")
 #define RKCoreDataIncluded
 #import "RKManagedObjectRequestOperation.h"
-#endif
 
 static NSUInteger RKPaginatorDefaultPerPage = 25;
 

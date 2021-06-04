@@ -18,9 +18,6 @@
 //  limitations under the License.
 //
 
-#if __has_include("CoreData.h")
-#if __has_include("RKManagedObjectCaching.h")
-
 #import "RKManagedObjectRequestOperation.h"
 #import "RKLog.h"
 #import "RKHTTPUtilities.h"
@@ -941,6 +938,3 @@ BOOL RKDoesArrayOfResponseDescriptorsContainOnlyEntityMappings(NSArray *response
 }
 
 @end
-
-#endif
-#endif

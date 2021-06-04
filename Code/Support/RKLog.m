@@ -169,7 +169,6 @@ void RKLogIntegerAsBinary(NSUInteger bitMask)
 
 void RKLogValidationError(NSError *error)
 {
-#if __has_include("CoreData.h")
     if ([[error domain] isEqualToString:NSCocoaErrorDomain]) {
         NSDictionary *userInfo = [error userInfo];
         NSArray *errors = [userInfo valueForKey:@"NSDetailedErrors"];
@@ -199,15 +198,12 @@ void RKLogValidationError(NSError *error)
         }
         return;
     }
-#endif
     RKLogError(@"Validation Error: %@ (userInfo: %@)", error, [error userInfo]);
 }
 
-#if __has_include("CoreData.h")
 void RKLogCoreDataError(NSError *error)
 {
     RKLogToComponentWithLevelWhileExecutingBlock(RKlcl_cRestKitCoreData, RKLogLevelError, ^{
         RKLogValidationError(error);
     });
 }
-#endif

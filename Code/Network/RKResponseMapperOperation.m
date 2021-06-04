@@ -28,10 +28,8 @@
 #import "RKMIMETypeSerialization.h"
 #import "RKDictionaryUtilities.h"
 
-#if __has_include("CoreData.h")
 #define RKCoreDataIncluded
 #import "RKManagedObjectMappingOperationDataSource.h"
-#endif
 
 // Set Logging Component
 #undef RKLogComponent
