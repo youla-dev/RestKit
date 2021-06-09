@@ -8,6 +8,7 @@ let package = Package(name: "RestKit",
     products: [
         .library(
             name: "RestKit",
+            type: .static,
             targets: [
                 "RestKit",
             ]),
